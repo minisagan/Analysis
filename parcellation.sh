@@ -1,16 +1,11 @@
 #!/bin/zsh 
 
-dwidir=/data1/New_CHD/ShardRecon03-cardiac
-T2dir=/data1/New_CHD/derivatives 
-diffFolder=/data1/New_CHD
-dataset=CHD
-
-"""
-dwidir=/data2/New_dHCP/ShardRecon03
-T2dir=/data2/New_dHCP/derivatives
-diffFolder=/data2/New_dHCP
+#dataset=CHD
 dataset=dHCP
-"""
+dwidir=/data2/New_${dataset}/ShardRecon03
+T2dir=/data2/New_${dataset}/derivatives
+diffFolder=/data2/New_${dataset}
+
 #echo "convert labels to cifti file"
 wb_command -cifti-create-label /home/sma22/Desktop/NormMod/labels/v_parcel_150_regions.dlabel.nii -left-label /home/sma22/Desktop/NormMod/labels/v_parcel_left_150_regions.label.gii -right-label /home/sma22/Desktop/NormMod/labels/v_parcel_right_150_regions.label.gii
 
